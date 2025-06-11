@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Saisha y Eiran</title>
+    <link rel="stylesheet" href="css/style.css" /> 
+
+  </head>
+  <body>
+    <header>
+      <h1>Saisha y Eiran</h1>
+      <p class="subtitulo">Una historia de magia, amor y redención</p>
+
+<img src="img/collar.jpg" alt="Collar" onclick="alternarImagen()" style="width: 150px; cursor: pointer; display: block; margin: 20px auto;">
+
+<!-- Contenedor de la imagen mágica -->
+<div id="contenedor-imagen" style="opacity: 0; transition: opacity 1s ease; text-align: center; margin-top: 20px; height: 0; overflow: hidden;">
+  <img src="img/img7.jpg" alt="Saisha mágica" width="300" />
+</div>
+
+    </header>
+
+    <main>
+      <section class="personajes">
+        <h2>Personajes</h2>
+        <ul>
+          <li><a href="personajes/saisha.html">Saisha</a></li>
+          <li><a href="personajes/eiran.html">Eiran</a></li>
+          <li><a href="personajes/yara.html">Yara</a></li>             
+        </ul>
+      </section>
+
+      <section class="personajes">
+        <h2><li><a href="historias/historia.html">Leer la historia completa 📖</a></li> </h2>
+        <ul>
+          
+          <li><a href="historias/historia.html?cap=1">Leer Capítulo 1</a></li>
+          <li><a href="historias/historia.html?cap=2">Leer Capítulo 2</a></li>
+          <li><a href="historias/historia.html?cap=3">Leer Capítulo 3</a></li>
+          <li><a href="historias/historia.html?cap=4">Leer Capítulo 4</a></li>
+          <li><a href="historias/historia.html?cap=5">Leer Capítulo 5</a></li>
+          <li><a href="historias/historia.html?cap=6">Leer Capítulo 6</a></li>
+          <li><a href="historias/historia.html?cap=7">Leer Capítulo 7</a></li>
+          <li><a href="historias/historia.html?cap=8">Leer Capítulo 8</a></li>
+          
+        </ul>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2025 Historia original por Suz 🌙</p>
+    </footer>
+
+<script>
+  let visible = false;
+
+  function alternarImagen() {
+    const contenedor = document.getElementById("contenedor-imagen");
+
+    if (!visible) {
+      contenedor.style.opacity = 1;
+      contenedor.style.height = "auto";
+    } else {
+      contenedor.style.opacity = 0;
+      contenedor.style.height = "0";
+    }
+
+    visible = !visible;
+  }
+</script>
+
+  </body>
+</html>

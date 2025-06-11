@@ -1,0 +1,216 @@
+/* Reset para que todo se vea parejito */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background: #0b0c1a;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fondo animado de estrellas */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(white 1px, transparent 1px),
+              radial-gradient(white 1px, transparent 1px);
+  background-size: 100px 100px;
+  background-position: 0 0, 50px 50px;
+  z-index: -1;
+  animation: moverEstrellas 60s linear infinite;
+  opacity: 0.2;
+}
+
+@keyframes moverEstrellas {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50px, -50px);
+  }
+}
+
+/* Encabezado mágico */
+h1 {
+  text-align: center;
+  color: #b8ffdb;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px #00ffc3;
+}
+
+/* Subtítulo elegante */
+h2 {
+  text-align: center;
+  color: #a5f3fc;
+  font-weight: normal;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  text-align: center;
+  color: #a5f3fc;
+  font-weight: normal;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+/* Listas estilizadas */
+ol {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  width: fit-content;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 255, 170, 0.3);
+}
+
+li {
+  padding: 5px;
+  font-size: 18px;
+}
+
+/* Tabla mágica */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 40px;
+  background-color: rgba(10, 20, 30, 0.6);
+  color: #e0f7fa;
+  box-shadow: 0 0 15px rgba(0, 200, 200, 0.2);
+  border: 1px solid #00ffc3;
+}
+
+th, td {
+  padding: 20px;
+  border: 1px solid #00ffc3;
+  text-align: left;
+  vertical-align: top;
+  font-size: 18px;
+}
+
+th {
+  background-color: rgba(0, 100, 100, 0.6);
+  color: #d1fff0;
+}
+
+/* Imágenes mágicas */
+img {
+  display: block;
+  margin: 30px auto;
+  width:400px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 213, 0.8);
+}
+
+/* Párrafos mágicos */
+p {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 5px solid #00ffc3;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+/* Estilo general para botones mágicos */
+.boton-magico {
+  font-size: 18px;
+  background-color: #0d3b66;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border:  none;
+  border-radius: 12px;
+  margin: 10px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 255, 213, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boton-magico:hover {
+  background-color:  #00ffd5;
+  box-shadow: 0 0 15px rgba(0, 255, 213, 0.6);
+  transform: scale(1.05);
+  color: #0d3b66;
+}
+
+.volver-indice {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+a {
+  color: #e0e0e0;              /* Color base suave */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #00ffd5;              /* Turquesa al pasar el mouse */
+  text-shadow: 0 0 8px #00ffd5;
+}
+
+a:visited {
+  color: #9b5de5;              /* Violeta al haber sido visitado */
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    margin: 15px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+#capituloActual {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 0.8s ease forwards;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
