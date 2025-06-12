@@ -14,6 +14,17 @@
     </header>
 
     <main>
+<!-- Contenedor de la imagen mágica -->
+  <div class="collar-contenedor" onclick="mostrarImagen()">
+  <img src="img/collar.jpg" alt="Collar mágico" class="collar-brillante">
+  <span class="mensaje-click">¡Haz clic!</span>
+</div>
+
+<div id="imagen-revelada" class="imagen-oculta">
+  <img src="img/img7.jpg" alt="Imagen revelada">
+</div>  
+
+      
       <section class="personajes">
         <h2>Personajes</h2>
         <ul>
@@ -24,9 +35,9 @@
       </section>
 
       <section class="personajes">
-        <h2><li><a href="historia.html?cap=1">Leer la historia completa 📖</a></li> </h2>
+        <h2><a href="historia.html?cap=1">Leer la historia completa 📖</a></h2>
+     
         <ul>
-          
           <li><a href="historia.html?cap=1">Leer Capítulo 1</a></li>
           <li><a href="historia.html?cap=2">Leer Capítulo 2</a></li>
           <li><a href="historia.html?cap=3">Leer Capítulo 3</a></li>
@@ -52,15 +63,7 @@
   }
 </script>
 <div class="contenido">
-<!-- Contenedor de la imagen mágica -->
-  <div class="collar-contenedor" onclick="mostrarImagen()">
-  <img src="img/collar.jpg" alt="Collar mágico" class="collar-brillante">
-  <span class="mensaje-click">¡Haz clic!</span>
-</div>
-
-<div id="imagen-revelada" class="imagen-oculta">
-  <img src="img/img7.jpg" alt="Imagen revelada">
-</div>     
+   
 </div>
   </body>
 </html>
