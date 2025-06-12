@@ -65,8 +65,8 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 10%;
-  height: 10%;
+  width: 50%;
+  height: 50%;
   background: url('img/img12.png') repeat;
   opacity: 0.08;
   animation: moverNiebla 120s linear infinite;
