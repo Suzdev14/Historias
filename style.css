@@ -205,7 +205,7 @@ display: inline-block;
   gap: 20px;
 }
 
-.historia {
+.personaje {
   flex: 1 1 250px;
   max-width: 300px;
 }
@@ -217,10 +217,12 @@ display: inline-block;
   cursor: pointer;
   user-select: none;
   transition: color 0.3s ease;
+  margin-bottom: 5px;
 }
 
 .personajes h2:hover {
   color: #b084ff; /* cambia el color al pasar el mouse */
+    padding-left: 20px;
 }
 .capitulo {
   opacity: 0;
