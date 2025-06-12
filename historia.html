@@ -297,7 +297,7 @@ Saisha.
   const btnSiguiente = document.getElementById("btn-siguiente");
 
   function mostrarCapitulo(index) {
-    window.scrollTo({ top: 0, behavior: "smooth" }); // 👈 Esta es la línea mágica
+  document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
       capitulos.forEach((cap, i) => {
       cap.classList.remove("activo");
       if (i === index) cap.classList.add("activo");
