@@ -67,7 +67,7 @@ body::before {
   left: 0;
   width: 200%;
   height: 200%;
-  background: url('https://i.ibb.co/tcTzJ4c/fog.png') repeat;
+  background: url('img/collar.jpg') repeat;
   opacity: 0.08;
   animation: moverNiebla 120s linear infinite;
   pointer-events: none;
