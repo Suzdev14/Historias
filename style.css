@@ -65,8 +65,8 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200%;
-  height: 200%;
+  width: 10%;
+  height: 10%;
   background: url('img/img12.png') repeat;
   opacity: 0.08;
   animation: moverNiebla 120s linear infinite;
@@ -81,7 +81,7 @@ body::before {
   to {
     transform: translate(-500px, -500px);
   }
-}
+} 
 
 /* Encabezado mágico */
 h1 {
