@@ -26,7 +26,7 @@
 
       
 <section class="personajes">
-  <h2 onclick="toggleLista()">Personajes ⮟</h2>
+  <h2 onclick="toggleLista(this)">Personajes <span class="flecha">⮟</span></h2>
   <ul id="lista-personajes" class="oculto">
     <li><a href="saisha.html">Saisha</a></li>
     <li><a href="eiran.html">Eiran</a></li>
@@ -60,10 +60,13 @@
     mensaje.style.display = 'none'; // Opcional: esconder el texto después del clic
   }
 
-      function toggleLista() {
+  function toggleLista(elemento) {
     const lista = document.getElementById('lista-personajes');
     lista.classList.toggle('oculto');
-                             }
+
+    const flecha = elemento.querySelector('.flecha');
+    flecha.textContent = lista.classList.contains('oculto') ? '⮟' : '⮝';
+  }
 </script>
 <div class="contenido">
    
