@@ -151,10 +151,12 @@ img:hover {
 }
 /* Imágenes ocultass */
 .collar-contenedor {
+display: inline-block;
   text-align: center;
   margin: 2rem auto;
   cursor: pointer;
   animation: destello 1s infinite alternate;
+  position: relative;
 }
 .collar-brillante {
   width: 200px;
@@ -172,6 +174,7 @@ img:hover {
   color: #ffd700;
   font-weight: bold;
   animation: parpadeo 1s infinite;
+   font-size: 1.2rem;
 }
 @keyframes parpadeo {
   0%, 100% { opacity: 1; }
