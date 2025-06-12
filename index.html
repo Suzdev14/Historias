@@ -12,12 +12,17 @@
       <h1>Saisha y Eiran</h1>
       <p class="subtitulo">Una historia de magia, amor y redención</p>
 
-<img src="img/collar.jpg" alt="Collar" onclick="alternarImagen()" style="width: 150px; cursor: pointer; display: block; margin: 20px auto;">
 
+      
 <!-- Contenedor de la imagen mágica -->
-<div id="contenedor-imagen" style="opacity: 0; transition: opacity 1s ease; text-align: center; margin-top: 20px; height: 0; overflow: hidden;">
-  <img src="img/img7.jpg" alt="Saisha mágica" width="300" />
+  <div class="collar-contenedor" onclick="mostrarImagen()">
+  <img src="img/collar.jpg" alt="Collar mágico" class="collar-brillante">
+  <span class="mensaje-click">¡Haz clic!</span>
 </div>
+
+<div id="imagen-revelada" class="imagen-oculta">
+  <img src="img/img7.jpg" alt="Imagen revelada">
+</div>     
 
     </header>
 
