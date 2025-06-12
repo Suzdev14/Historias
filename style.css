@@ -59,6 +59,30 @@ body::before {
     opacity: 0.3;
   }
 }
+
+/* Neblina mágica */
+.fog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('https://i.ibb.co/tcTzJ4c/fog.png') repeat;
+  opacity: 0.08;
+  animation: moverNiebla 120s linear infinite;
+  pointer-events: none;
+  z-index: -2;
+}
+
+@keyframes moverNiebla {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-500px, -500px);
+  }
+}
+
 /* Encabezado mágico */
 h1 {
   text-align: center;
