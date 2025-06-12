@@ -169,12 +169,14 @@ display: inline-block;
   transform: scale(1.05);
 }
 .mensaje-click {
-  display: block;
-  margin-top: 0.5rem;
+ position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 10px);
   color: #ffd700;
   font-weight: bold;
   animation: parpadeo 1s infinite;
-   font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 @keyframes parpadeo {
   0%, 100% { opacity: 1; }
