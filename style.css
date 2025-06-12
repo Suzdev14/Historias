@@ -135,7 +135,7 @@ th {
 
 /* Imágenes mágicas */
 img {
-  display: inline-block;
+  display: block;
   margin: 30px auto;
   width:400px;
   border-radius: 12px;
