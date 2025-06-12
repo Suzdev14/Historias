@@ -24,21 +24,23 @@ body {
   margin: auto;
 }
 
-/* Fondo animado de estrellas */
+/* Fondo estrellado mágico con parpadeo */
 body::before {
   content: '';
   position: fixed;
   top: 0;
   left: 0;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(white 1px, transparent 1px),
-              radial-gradient(white 1px, transparent 1px);
+  width: 300%;
+  height: 300%;
+  background: 
+    radial-gradient(white 1px, transparent 1px),
+    radial-gradient(white 1px, transparent 1px);
   background-size: 100px 100px;
   background-position: 0 0, 50px 50px;
   z-index: -1;
-  animation: moverEstrellas 60s linear infinite;
-  opacity: 0.2;
+  animation: moverEstrellas 60s linear infinite, parpadeoEstrellas 2s ease-in-out infinite alternate;
+  opacity: 0.15;
+  pointer-events: none;
 }
 
 @keyframes moverEstrellas {
@@ -46,10 +48,17 @@ body::before {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(-50px, -50px);
+    transform: translate(-100px, -100px);
   }
 }
-
+@keyframes parpadeoEstrellas {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
 /* Encabezado mágico */
 h1 {
   text-align: center;
