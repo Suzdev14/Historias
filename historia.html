@@ -285,20 +285,26 @@ Saisha.
 
 
 <div class="navegacion" style="text-align: center;">
-  <button class="boton-magico" onclick="cambiarCapitulo(-1)">Anterior</button>
-  <button class="boton-magico" onclick="cambiarCapitulo(1)">Siguiente</button>
+  <button id="btn-anterior" class="boton-magico" onclick="cambiarCapitulo(-1)">Anterior</button>
+  <button id="btn-siguiente" class="boton-magico" onclick="cambiarCapitulo(1)">Siguiente</button>
 </div>
 
 
 <script>
   let capActual = 0;
   const capitulos = document.querySelectorAll(".capitulo");
+  const btnAnterior = document.getElementById("btn-anterior");
+  const btnSiguiente = document.getElementById("btn-siguiente");
 
   function mostrarCapitulo(index) {
     capitulos.forEach((cap, i) => {
       cap.classList.remove("activo");
       if (i === index) cap.classList.add("activo");
     });
+
+    // Mostrar/ocultar botones según el capítulo
+    btnAnterior.style.display = (index === 0) ? "none" : "inline-block";
+    btnSiguiente.style.display = (index === capitulos.length - 1) ? "none" : "inline-block";
   }
 
   function cambiarCapitulo(direccion) {
@@ -308,11 +314,11 @@ Saisha.
     mostrarCapitulo(capActual);
   }
 
- const params = new URLSearchParams(window.location.search);
+  // Por si llega con ?cap=2, por ejemplo
+  const params = new URLSearchParams(window.location.search);
   const cap = parseInt(params.get('cap'));
-
   if (!isNaN(cap) && cap > 0 && cap <= capitulos.length) {
-    capActual = cap - 1; // Porque los índices empiezan en 0
+    capActual = cap - 1;
   }
 
   mostrarCapitulo(capActual);
