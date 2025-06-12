@@ -67,7 +67,7 @@ body::before {
   left: 0;
   width: 200%;
   height: 200%;
-  background: url('img/collar.jpg') repeat;
+  background: url('img/img12.png') repeat;
   opacity: 0.08;
   animation: moverNiebla 120s linear infinite;
   pointer-events: none;
