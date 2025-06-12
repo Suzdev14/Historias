@@ -224,6 +224,17 @@ display: inline-block;
   color: #b084ff; /* cambia el color al pasar el mouse */
     padding-left: 20px;
 }
+#lista-personajes {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+#lista-personajes.activo {
+  max-height: 500px; /* Ajustá según necesidad */
+  opacity: 1;
+}
 .capitulo {
   opacity: 0;
   transform: translateY(20px);
