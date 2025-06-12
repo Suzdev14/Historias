@@ -45,7 +45,7 @@
   </style>
 </head>
 <body>
-	<audio id="sonidoClick" src="sonido1.mpeg" preload="auto"></audio>
+	<audio id="sonidoCambio" src="sonidos/sonido1.mp3" preload="auto"></audio>
 	<div class="contenido">
   <!-- TODO el contenido de tu página va aquí dentro -->
 </div>
@@ -319,6 +319,7 @@ Saisha.
     if (capActual < 0) capActual = 0;
     if (capActual >= capitulos.length) capActual = capitulos.length - 1;
     mostrarCapitulo(capActual);
+    sonido.play(); // ¡Hace el sonido mágico!	  
   }
 
   // Por si llega con ?cap=2, por ejemplo
@@ -330,19 +331,6 @@ Saisha.
 
   mostrarCapitulo(capActual);
 
-	function reproducirSonido() {
-  const sonido = document.getElementById("sonidoClick");
-  if (sonido) sonido.play();
-}
-
-function cambiarCapitulo(direccion) {
-  reproducirSonido();
-  capActual += direccion;
-  if (capActual < 0) capActual = 0;
-  if (capActual >= capitulos.length) capActual = capitulos.length - 1;
-  mostrarCapitulo(capActual);
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
 </script>
 
 <div class="volver-indice">
