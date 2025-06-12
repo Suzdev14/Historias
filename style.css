@@ -137,22 +137,30 @@ th {
 img {
   display: block;
   margin: 30px auto;
-  width:400px;
+  width: 400px;
+  max-width: 100%;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0, 255, 213, 0.5);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  max-width: 100%;
-  height: auto;
   }
-
 img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 30px rgba(0, 255, 213, 0.8);
 }
+
+/* Contenedor centrado para todo lo que necesite magia visual */
+.centro-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 /* Imágenes ocultass */
 .collar-contenedor {
-display: inline-block;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 2rem auto;
   cursor: pointer;
   animation: destello 1s infinite alternate;
@@ -169,7 +177,7 @@ display: inline-block;
   transform: scale(1.05);
 }
 .mensaje-click {
- position: absolute;
+  position: absolute;
   top: 100%;
   left: 50%;
   transform: translate(-50%, 10px);
@@ -177,27 +185,35 @@ display: inline-block;
   font-weight: bold;
   animation: parpadeo 1s infinite;
   font-size: 1.2rem;
+  text-align: center;
 }
+/* Parpadeo suave */
 @keyframes parpadeo {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
+/* Imagen que aparece al hacer clic */
 .imagen-oculta {
   display: none;
-  text-align: center;
   margin-top: 2rem;
 }
+
 .imagen-oculta img {
+  display: block;
+  margin: 0 auto;
   width: 300px;
   max-width: 90%;
   border-radius: 12px;
   box-shadow: 0 0 20px #ffd700aa;
   animation: aparecer-img 1s ease-in-out forwards;
 }
+/* Animación de aparición */
 @keyframes aparecer-img {
   from { opacity: 0; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1); }
 }
+
 .contenedor-personajes {
   display: flex;
   flex-wrap: wrap;
