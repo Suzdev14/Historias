@@ -76,8 +76,16 @@ h2 {
   font-weight: normal;
   font-size: 30px;
   margin-bottom: 30px;
+  animation: brillarTexto 3s ease-in-out infinite alternate;
 }
-
+@keyframes brillarTexto {
+  from {
+    text-shadow: 0 0 5px #00ffd5;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffd5, 0 0 40px #0ff;
+  }
+}
 h3 {
   text-align: center;
   color: #a5f3fc;
