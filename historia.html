@@ -5,14 +5,19 @@
   <title>Historia de Saisha y Eiran</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .capitulo {
-      display: none;
-    }
+  
+	  .capitulo {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: none;
+		   }
 
-    .capitulo.activo {
-      display: block;
-      animation: fadeIn 0.6s ease-in-out;
-    }
+  .capitulo.activo {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+ 		   }
 
     .navegacion {
       margin-top: 20px;
