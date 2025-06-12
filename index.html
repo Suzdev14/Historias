@@ -56,20 +56,12 @@
     </footer>
 
 <script>
-  let visible = false;
+  function mostrarImagen() {
+    const imagen = document.getElementById('imagen-revelada');
+    imagen.style.display = 'block';
 
-  function alternarImagen() {
-    const contenedor = document.getElementById("contenedor-imagen");
-
-    if (!visible) {
-      contenedor.style.opacity = 1;
-      contenedor.style.height = "auto";
-    } else {
-      contenedor.style.opacity = 0;
-      contenedor.style.height = "0";
-    }
-
-    visible = !visible;
+    const mensaje = document.querySelector('.mensaje-click');
+    mensaje.style.display = 'none'; // Opcional: esconder el texto después del clic
   }
 </script>
 <div class="contenido">
