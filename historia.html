@@ -297,7 +297,7 @@ Saisha.
   const btnSiguiente = document.getElementById("btn-siguiente");
 
   function mostrarCapitulo(index) {
-  document.documentElement.scrollTo({ top: 0, behavior: "smooth" });
+      document.documentElement.scrollTo({ top: 0, behavior: "smooth" }); // Funciona mejor en móvil
       capitulos.forEach((cap, i) => {
       cap.classList.remove("activo");
       if (i === index) cap.classList.add("activo");
