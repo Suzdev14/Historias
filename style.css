@@ -205,7 +205,7 @@ display: inline-block;
   gap: 20px;
 }
 
-.personaje {
+.historia {
   flex: 1 1 250px;
   max-width: 300px;
 }
