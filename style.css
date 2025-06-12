@@ -145,12 +145,17 @@ img:hover {
 
 /* Párrafos mágicos */
 p {
+  text-align: justify;
+}
+
+p {
   margin-top: 20px;
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.05);
   border-left: 5px solid #00ffc3;
   border-radius: 8px;
   font-size: 18px;
+  text-align: justify;  /* 👈 Esta línea es la nueva */
 }
 
 /* Estilo general para botones mágicos */
