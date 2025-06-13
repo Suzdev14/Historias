@@ -54,9 +54,12 @@
     </footer>
 
 <script>
-  function mostrarImagen() {
-    const imagen = document.getElementById('imagen-revelada');
-    imagen.style.display = 'block';
+  function revelarImagen() {
+    const imagen = document.getElementById("imagen-revelada");
+    if (imagen) {
+      imagen.style.display = "block";
+    }
+  }
 
     const mensaje = document.querySelector('.mensaje-click');
     mensaje.style.display = 'none'; // Opcional: esconder el texto después del clic
