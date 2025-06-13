@@ -16,13 +16,13 @@
     <main>
 <!-- Contenedor de la imagen mágica -->
 <div class="centro-flex">
-  <div class="collar-contenedor" onclick="revelarImagen()">
+  <div class="collar-contenedor" onclick=""mostrarImagen()"">
     <img class="collar-brillante" src="img/collar.jpg" alt="Collar mágico">
     <div class="mensaje-click">¡Haz clic!</div>
   </div>
 </div>
 
-<div id="revelarImagen" class="imagen-oculta">
+<div id="imagen-revelada" class="imagen-oculta">
   <img src="img/img7.jpg" alt="Imagen revelada">
 </div>
 
@@ -54,11 +54,12 @@
     </footer>
 
 <script>
-  function revelarImagen() {
-    const imagen = document.getElementById("imagen-revelada");
-    if (imagen) {
-      imagen.style.display = "block";
-    }
+  function mostrarImagen() {
+    const imagen = document.getElementById('imagen-revelada');
+    imagen.style.display = 'block';
+
+    const mensaje = document.querySelector('.mensaje-click');
+    mensaje.style.display = 'none'; // Opcional: esconder el texto después del clic
   }
 
     const mensaje = document.querySelector('.mensaje-click');
