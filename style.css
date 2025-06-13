@@ -153,9 +153,9 @@ img:hover {
 /* Contenedor centrado para todo lo que necesite magia visual */
 .centro-flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 /* Imágenes ocultass */
 .collar-contenedor {
