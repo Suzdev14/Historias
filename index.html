@@ -50,22 +50,22 @@
     <p>© 2025 Historia original por Suz 🌙</p>
   </footer>
 
-  <script>
-    function mostrarImagen() {
-      const imagen = document.getElementById('imagen-revelada');
-      imagen.style.display = 'block';
+<script>
+  function mostrarImagen() {
+    const imagen = document.getElementById('imagen-revelada');
+    imagen.style.display = 'block';
 
-      const mensaje = document.querySelector('.mensaje-click');
-      mensaje.style.display = 'none';
-    }
+    const mensaje = document.querySelector('.mensaje-click');
+    mensaje.style.display = 'none';
+  }
 
-    function toggleLista(elemento) {
-      const lista = document.getElementById('lista-personajes');
-      const flecha = elemento.querySelector('.flecha');
+  function toggleLista(elemento) {
+    const lista = document.getElementById('lista-personajes');
+    const flecha = elemento.querySelector('.flecha');
 
-      lista.classList.toggle('activo');
-      flecha.textContent = lista.classList.contains('activo') ? '⮝' : '⮟';
-    }
-  </script>
+    lista.classList.toggle('activo');
+    flecha.textContent = lista.classList.contains('activo') ? '⮝' : '⮟';
+  }
+</script>
 </body>
 </html>
