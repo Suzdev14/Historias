@@ -1,79 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   <!-- <meta charset="UTF-8" /> -->
-    <title>Saisha y Eiran</title>
-    <link rel="stylesheet" href="style.css" /> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saisha y Eiran</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Saisha y Eiran</h1>
+    <p class="subtitulo">Una historia de magia, amor y redención</p>
+  </header>
 
-  </head>
-  <body>
-    <header>
-      <h1>Saisha y Eiran</h1>
-      <p class="subtitulo">Una historia de magia, amor y redención</p>
-    </header>
+  <main>
+    <!-- Contenedor de la imagen mágica -->
+    <div class="centro-flex">
+      <div class="collar-contenedor" onclick="mostrarImagen()">
+        <img class="collar-brillante" src="img/collar.jpg" alt="Collar mágico">
+        <div class="mensaje-click">¡Haz clic!</div>
+      </div>
+    </div>
 
-    <main>
-<!-- Contenedor de la imagen mágica -->
-<div class="centro-flex">
-  <div class="collar-contenedor" onclick="mostrarImagen()">
-    <img class="collar-brillante" src="img/collar.jpg" alt="Collar mágico">
-    <div class="mensaje-click">¡Haz clic!</div>
-  </div>
-</div>
+    <div id="imagen-revelada" class="imagen-oculta">
+      <img src="img/img7.jpg" alt="Imagen revelada">
+    </div>
 
-<div id="imagen-revelada" class="imagen-oculta">
-  <img src="img/img7.jpg" alt="Imagen revelada">
-</div>
+    <section class="personajes">
+      <h2 onclick="toggleLista(this)">Personajes <span class="flecha">⮟</span></h2>
+      <ul id="lista-personajes" class="oculto">
+        <li><a href="saisha.html">Saisha</a></li>
+        <li><a href="eiran.html">Eiran</a></li>
+        <li><a href="yara.html">Yara</a></li>
+      </ul>
+    </section>
 
-      
-<section class="personajes">
-<h2 onclick="toggleLista(this)">Personajes <span class="flecha">⮟</span></h2>
-<ul id="lista-personajes">
-  <li><a href="saisha.html">Saisha</a></li>
-  <li><a href="eiran.html">Eiran</a></li>
-  <li><a href="yara.html">Yara</a></li>
-</ul>
-</section>
+    <section class="historia">
+      <h2><a href="historia.html?cap=1">Leer la historia completa 📖</a></h2>
+      <ul>
+        <li><a href="historia.html?cap=1">Leer Capítulo 1</a></li>
+        <li><a href="historia.html?cap=2">Leer Capítulo 2</a></li>
+        <li><a href="historia.html?cap=3">Leer Capítulo 3</a></li>
+        <li><a href="historia.html?cap=4">Leer Capítulo 4</a></li>
+        <li><a href="historia.html?cap=5">Leer Capítulo 5</a></li>
+      </ul>
+    </section>
+  </main>
 
-<section class="historia">
-  <h2><a href="historia.html?cap=1">Leer la historia completa 📖</a></h2>
-  <ul>
-    <li><a href="historia.html?cap=1">Leer Capítulo 1</a></li>
-    <li><a href="historia.html?cap=2">Leer Capítulo 2</a></li>
-    <li><a href="historia.html?cap=3">Leer Capítulo 3</a></li>
-    <li><a href="historia.html?cap=4">Leer Capítulo 4</a></li>
-    <li><a href="historia.html?cap=5">Leer Capítulo 5</a></li>
-  </ul>
-</section>
+  <footer>
+    <p>© 2025 Historia original por Suz 🌙</p>
+  </footer>
 
-    </main>
+  <script>
+    function mostrarImagen() {
+      const imagen = document.getElementById('imagen-revelada');
+      imagen.style.display = 'block';
 
-    <footer>
-      <p>© 2025 Historia original por Suz 🌙</p>
-    </footer>
+      const mensaje = document.querySelector('.mensaje-click');
+      mensaje.style.display = 'none';
+    }
 
-<script>
-  function mostrarImagen() {
-    const imagen = document.getElementById('imagen-revelada');
-    imagen.style.display = 'block';
+    function toggleLista(elemento) {
+      const lista = document.getElementById('lista-personajes');
+      const flecha = elemento.querySelector('.flecha');
 
-    const mensaje = document.querySelector('.mensaje-click');
-    mensaje.style.display = 'none'; // Opcional: esconder el texto después del clic
-  }
-
-  function toggleLista(elemento) {
-    const lista = document.getElementById('lista-personajes');
-    const flecha = elemento.querySelector('.flecha');
-
-    lista.classList.toggle('activo');
-
-    // Cambiar la flecha
-    flecha.textContent = lista.classList.contains('activo') ? '⮝' : '⮟';
-  }
-</script>
-<div class="contenido">
-   
-</div>
-  </body>
+      lista.classList.toggle('activo');
+      flecha.textContent = lista.classList.contains('activo') ? '⮝' : '⮟';
+    }
+  </script>
+</body>
 </html>
