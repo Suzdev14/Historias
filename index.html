@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saisha y Eiran</title>
   <link rel="stylesheet" href="style.css" />
@@ -13,7 +13,8 @@
   </header>
 
   <main>
-    <!-- Contenedor de la imagen mágica -->
+
+    <!-- Imagen del collar interactivo -->
     <div class="centro-flex">
       <div class="collar-contenedor" onclick="mostrarImagen()">
         <img class="collar-brillante" src="img/collar.jpg" alt="Collar mágico">
@@ -25,15 +26,17 @@
       <img src="img/img7.jpg" alt="Imagen revelada">
     </div>
 
-<section class="personajes">
-  <h2 onclick="toggleLista(this)">Personajes <span class="flecha">⮟</span></h2>
-  <ul id="lista-personajes">
-    <li><a href="saisha.html">Saisha</a></li>
-    <li><a href="eiran.html">Eiran</a></li>
-    <li><a href="yara.html">Yara</a></li>
-  </ul>
-</section>
+    <!-- Menú de personajes -->
+    <section class="personajes">
+      <h2 onclick="toggleLista(this)">Personajes <span class="flecha">⮟</span></h2>
+      <ul id="lista-personajes">
+        <li><a href="saisha.html">Saisha</a></li>
+        <li><a href="eiran.html">Eiran</a></li>
+        <li><a href="yara.html">Yara</a></li>
+      </ul>
+    </section>
 
+    <!-- Capítulos de la historia -->
     <section class="historia">
       <h2><a href="historia.html?cap=1">Leer la historia completa 📖</a></h2>
       <ul>
@@ -44,29 +47,30 @@
         <li><a href="historia.html?cap=5">Leer Capítulo 5</a></li>
       </ul>
     </section>
+
   </main>
 
   <footer>
     <p>© 2025 Historia original por Suz 🌙</p>
   </footer>
 
-<script>
-  function mostrarImagen() {
-    const imagen = document.getElementById('imagen-revelada');
-    imagen.style.display = 'block';
+  <!-- Scripts mágicos -->
+  <script>
+    function mostrarImagen() {
+      const imagen = document.getElementById('imagen-revelada');
+      imagen.style.display = 'block';
 
-    const mensaje = document.querySelector('.mensaje-click');
-    mensaje.style.display = 'none';
-  }
-  function toggleLista(elemento) {
-    const lista = document.getElementById('lista-personajes');
-    const flecha = elemento.querySelector('.flecha');
+      const mensaje = document.querySelector('.mensaje-click');
+      mensaje.style.display = 'none';
+    }
 
-    lista.classList.toggle('activo');
+    function toggleLista(elemento) {
+      const lista = document.getElementById('lista-personajes');
+      const flecha = elemento.querySelector('.flecha');
 
-    // Cambiar flecha para dar feedback visual
-    flecha.textContent = lista.classList.contains('activo') ? '⮝' : '⮟';
-  }
-</script>
+      lista.classList.toggle('activo');
+      flecha.textContent = lista.classList.contains('activo') ? '⮝' : '⮟';
+    }
+  </script>
 </body>
 </html>
