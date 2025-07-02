@@ -16,7 +16,17 @@ body {
   position: relative;
   font-size: 1.2rem;
 }
+#lista-personajes {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
 
+#lista-personajes.activo {
+  max-height: 500px;
+  opacity: 1;
+}
 .contenido {
   padding: 40px;
   width: 80%;
