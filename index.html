@@ -25,14 +25,14 @@
       <img src="img/img7.jpg" alt="Imagen revelada">
     </div>
 
-    <section class="personajes">
-      <h2 onclick="toggleLista(this)">Personajes <span class="flecha">⮟</span></h2>
-      <ul id="lista-personajes" class="oculto">
-        <li><a href="saisha.html">Saisha</a></li>
-        <li><a href="eiran.html">Eiran</a></li>
-        <li><a href="yara.html">Yara</a></li>
-      </ul>
-    </section>
+<section class="personajes">
+  <h2 onclick="toggleLista(this)">Personajes <span class="flecha">⮟</span></h2>
+  <ul id="lista-personajes">
+    <li><a href="saisha.html">Saisha</a></li>
+    <li><a href="eiran.html">Eiran</a></li>
+    <li><a href="yara.html">Yara</a></li>
+  </ul>
+</section>
 
     <section class="historia">
       <h2><a href="historia.html?cap=1">Leer la historia completa 📖</a></h2>
@@ -58,12 +58,13 @@
     const mensaje = document.querySelector('.mensaje-click');
     mensaje.style.display = 'none';
   }
-
   function toggleLista(elemento) {
     const lista = document.getElementById('lista-personajes');
     const flecha = elemento.querySelector('.flecha');
 
     lista.classList.toggle('activo');
+
+    // Cambiar flecha para dar feedback visual
     flecha.textContent = lista.classList.contains('activo') ? '⮝' : '⮟';
   }
 </script>
