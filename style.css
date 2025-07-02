@@ -23,7 +23,14 @@ body {
   max-width: 800px;
   margin: auto;
 }
-
+.centro-flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center; /* Asegura centrado del texto */
+}
 /* Fondo estrellado mágico con parpadeo */
 body::before {
   content: '';
@@ -69,7 +76,12 @@ h1 {
   margin-bottom: 20px;
   text-shadow: 0 0 15px #00ffc3;
 }
-
+.subtitulo {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #a5f3fc;
+  margin-bottom: 30px;
+}
 /* Subtítulo elegante */
 h2 {
   text-align: center;
