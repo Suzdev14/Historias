@@ -7,14 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- ENCABEZADO -->
   <header>
     <h1>Saisha y Eiran</h1>
     <p class="subtitulo">Una historia de magia, amor y redención</p>
   </header>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
 
-    <!-- Imagen del collar interactivo -->
+    <!-- COLLAR INTERACTIVO -->
     <div class="centro-flex">
       <div class="collar-contenedor" onclick="mostrarImagen()">
         <img class="collar-brillante" src="img/collar.jpg" alt="Collar mágico">
@@ -22,11 +25,12 @@
       </div>
     </div>
 
+    <!-- IMAGEN QUE APARECE AL CLIC -->
     <div id="imagen-revelada" class="imagen-oculta">
-      <img src="img/img7.jpg" alt="Imagen revelada">
+      <img src="img/img7.jpg" alt="Imagen revelada del collar">
     </div>
 
-    <!-- Menú de personajes -->
+    <!-- SECCIÓN DE PERSONAJES -->
     <section class="personajes">
       <h2 onclick="toggleLista(this)">Personajes <span class="flecha">⮟</span></h2>
       <ul id="lista-personajes">
@@ -36,25 +40,26 @@
       </ul>
     </section>
 
-    <!-- Capítulos de la historia -->
+    <!-- CAPÍTULOS DE LA HISTORIA -->
     <section class="historia">
       <h2><a href="historia.html?cap=1">Leer la historia completa 📖</a></h2>
       <ul>
-        <li><a href="historia.html?cap=1">Leer Capítulo 1</a></li>
-        <li><a href="historia.html?cap=2">Leer Capítulo 2</a></li>
-        <li><a href="historia.html?cap=3">Leer Capítulo 3</a></li>
-        <li><a href="historia.html?cap=4">Leer Capítulo 4</a></li>
-        <li><a href="historia.html?cap=5">Leer Capítulo 5</a></li>
+        <li><a href="historia.html?cap=1">Capítulo 1</a></li>
+        <li><a href="historia.html?cap=2">Capítulo 2</a></li>
+        <li><a href="historia.html?cap=3">Capítulo 3</a></li>
+        <li><a href="historia.html?cap=4">Capítulo 4</a></li>
+        <li><a href="historia.html?cap=5">Capítulo 5</a></li>
       </ul>
     </section>
 
   </main>
 
+  <!-- PIE DE PÁGINA -->
   <footer>
     <p>© 2025 Historia original por Suz 🌙</p>
   </footer>
 
-  <!-- Scripts mágicos -->
+  <!-- SCRIPTS MÁGICOS -->
   <script>
     function mostrarImagen() {
       const imagen = document.getElementById('imagen-revelada');
@@ -72,5 +77,6 @@
       flecha.textContent = lista.classList.contains('activo') ? '⮝' : '⮟';
     }
   </script>
+
 </body>
 </html>
