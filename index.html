@@ -16,7 +16,7 @@
     <main>
 <!-- Contenedor de la imagen mágica -->
 <div class="centro-flex">
-  <div class="collar-contenedor" onclick=""mostrarImagen()"">
+  <div class="collar-contenedor" onclick="mostrarImagen()">
     <img class="collar-brillante" src="img/collar.jpg" alt="Collar mágico">
     <div class="mensaje-click">¡Haz clic!</div>
   </div>
@@ -57,10 +57,6 @@
   function mostrarImagen() {
     const imagen = document.getElementById('imagen-revelada');
     imagen.style.display = 'block';
-
-    const mensaje = document.querySelector('.mensaje-click');
-    mensaje.style.display = 'none'; // Opcional: esconder el texto después del clic
-  }
 
     const mensaje = document.querySelector('.mensaje-click');
     mensaje.style.display = 'none'; // Opcional: esconder el texto después del clic
