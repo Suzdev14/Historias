@@ -271,7 +271,7 @@ img:hover {
 }
 
 #lista-personajes.activo {
-  max-height: 500px; /* Ajustá según necesidad */
+   max-height: none;  /* max-height: 500px; Ajustá según necesidad */
   opacity: 1;
 }
 .capitulo {
